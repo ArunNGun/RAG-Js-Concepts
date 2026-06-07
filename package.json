@@ -1,0 +1,27 @@
+{
+  "name": "rag-js-concepts",
+  "version": "1.0.0",
+  "description": "this is a simple RAG built for all the programmming conceppts I'm learning",
+  "keywords": [],
+  "homepage": "https://github.com/ArunNGun/RAG-Js-Concepts#readme",
+  "bugs": {
+    "url": "https://github.com/ArunNGun/RAG-Js-Concepts/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ArunNGun/RAG-Js-Concepts.git"
+  },
+  "license": "ISC",
+  "author": "ArunNGun",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@xenova/transformers": "^2.17.2",
+    "dotenv": "^17.4.2",
+    "faiss-node": "^0.5.1",
+    "openai": "^6.42.0"
+  }
+}
