@@ -97,7 +97,8 @@ The retrieved chunks are injected into the system prompt. The LLM is explicitly 
 
 Query: *"what is chunking and why does chunk size matter?"*
 
-![Positive scenario — RAG finds relevant context and answers correctly](assets/positive.png)
+<img width="1051" height="561" alt="image" src="https://github.com/user-attachments/assets/d1f60733-b835-44e2-a71c-00056c1e26fd" />
+
 
 The system retrieved the relevant chunk about chunking from the knowledge base and generated a grounded, accurate answer.
 
@@ -107,7 +108,8 @@ The system retrieved the relevant chunk about chunking from the knowledge base a
 
 Query: *"give me a recursive program in python for fibonacci series"*
 
-![Negative scenario — RAG correctly refuses when context is missing](assets/negative.png)
+<img width="1063" height="458" alt="image" src="https://github.com/user-attachments/assets/50e19480-562a-4e19-aa25-e5289fd157d7" />
+
 
 No relevant chunks found. Instead of hallucinating an answer, the system correctly said **"I don't know"** — exactly what a production RAG system should do.
 
