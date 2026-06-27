@@ -1,20 +1,19 @@
-const {pipeline} = require('@xenova/transformers');
+const OpenAI = require('openai');
+require('dotenv').config();
 
-let embedder = null;
+const client = new OpenAI({
+  apiKey: process.env.API_KEY,
+  baseURL: process.env.BASE_URL,
+});
 
-async function getEmbedder(){
-    if(!embedder){
-        console.log('Loading embedder model...');
-        embedder = await pipeline('feature-extraction', 'Xenova/all-MiniLM-L6-v2');
-        console.log('Embedder model loaded.');
-    }
-    return embedder;
+const EMBED_MODEL = 'text-embedding-3-small';
+
+async function embed(text) {
+  const response = await client.embeddings.create({
+    model: EMBED_MODEL,
+    input: text,
+  });
+  return response.data[0].embedding;
 }
 
-async function embed(text){
-    const model = await getEmbedder();
-    const output = await model(text, {pooling: 'mean', normalize: true});
-    return Array.from(output.data);
-}
-
-module.exports = {embed};
+module.exports = { embed };

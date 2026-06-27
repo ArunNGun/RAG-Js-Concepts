@@ -14,7 +14,7 @@
   "license": "ISC",
   "author": "ArunNGun",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "ingest": "node src/ingester/index.js",

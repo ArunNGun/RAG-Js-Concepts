@@ -3,7 +3,7 @@ services:
     name: rag-js-concepts
     env: node
     buildCommand: npm install
-    startCommand: npm start
+    startCommand: node server.js
     envVars:
       - key: BASE_URL
         value: https://api.fuelix.ai
