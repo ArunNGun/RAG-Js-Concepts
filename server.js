@@ -52,7 +52,7 @@ app.post('/api/query', async (req, res) => {
 
     // Call LLM
     const response = await client.chat.completions.create({
-      model: process.env.MODEL || 'claude-sonnet-4-6',
+      model: process.env.MODEL,
       messages: [
         { role: 'system', content: systemPrompt },
         {

@@ -6,8 +6,8 @@ services:
     startCommand: node server.js
     envVars:
       - key: BASE_URL
-        value: https://api.fuelix.ai
+        sync: false
       - key: API_KEY
-        sync: false   # set this manually in Render dashboard — do not commit
+        sync: false
       - key: MODEL
-        value: claude-sonnet-4-6
+        sync: false

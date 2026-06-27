@@ -34,7 +34,7 @@ async function query(question) {
 
   // 5. Call LLM
   const response = await client.chat.completions.create({
-    model: 'claude-sonnet-4-6',
+    model: process.env.MODEL,
     messages: [
       { role: 'system', content: systemPrompt },
       { role: 'user', content: `Context:\n${context}\n\nQuestion: ${question}` }
