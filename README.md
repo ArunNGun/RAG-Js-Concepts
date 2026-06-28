@@ -24,7 +24,7 @@ User question → embed → similarity search → top-K chunks → LLM prompt �
 |---|---|
 | Embeddings | `@xenova/transformers` — `all-MiniLM-L6-v2` (runs fully locally, no API cost) |
 | Vector Store | `faiss-node` — Facebook's FAISS, IndexFlatIP (inner product on normalized vectors = cosine similarity) |
-| LLM | Fuelix AI (OpenAI-compatible API) — `claude-sonnet-4-6` |
+| LLM | (OpenAI-compatible API) — `claude-sonnet-4-6` |
 | Runtime | Node.js (CommonJS) |
 
 No paid embedding API. No cloud vector DB. Embeddings run 100% local.
@@ -43,7 +43,7 @@ RAG-Js-concepts/
 ├── vector-store/
 │   ├── index.faiss              # FAISS binary index
 │   └── chunks.json              # Chunk text + source metadata
-├── .env                         # FUELIX_API_KEY, FUELIX_BASE_URL
+├── .env                         #  _API_KEY,  _BASE_URL
 └── package.json
 ```
 
@@ -71,7 +71,7 @@ node src/query/index.js "your question here"
 - Embeds the question using the same local model
 - Runs cosine similarity search on FAISS index → top-2 chunks
 - Builds a grounded prompt: `Answer using ONLY this context: [chunks]`
-- Calls Fuelix LLM (`claude-sonnet-4-6`) and returns the answer
+- Calls   LLM (`claude-sonnet-4-6`) and returns the answer
 
 ---
 
@@ -125,8 +125,8 @@ npm install
 
 Create `.env`:
 ```
-FUELIX_API_KEY=your_key_here
-FUELIX_BASE_URL=https://api.fuelix.ai
+API_KEY=your_key_here
+BASE_URL=yourbaseurl
 ```
 
 Add your `.md` files to `docs/`, then:
